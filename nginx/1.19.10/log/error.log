@@ -1,0 +1,71 @@
+2021/05/13 06:08:42 [emerg] 1#1: directive "index" is not terminated by ";" in /etc/nginx/conf.d/localhost.conf:5
+2021/05/13 06:09:29 [error] 23#23: *1 "/etc/nginx/html/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/05/13 06:09:29 [error] 23#23: *1 open() "/etc/nginx/html/error/404.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/05/13 06:09:29 [error] 23#23: *1 open() "/etc/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2021/05/13 06:09:29 [error] 23#23: *1 open() "/etc/nginx/html/error/404.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2021/05/13 06:09:30 [error] 23#23: *1 "/etc/nginx/html/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/05/13 06:09:30 [error] 23#23: *1 open() "/etc/nginx/html/error/404.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/05/13 06:10:31 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/05/13 06:10:31 [error] 22#22: *1 open() "/var/www/error/403.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/05/13 06:10:56 [error] 22#22: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /phpinfo.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2021/05/13 06:17:14 [error] 22#22: *4 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /phpinfo.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2021/05/13 06:17:14 [error] 22#22: *4 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/13 06:17:14 [error] 22#22: *4 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/13 06:17:16 [error] 22#22: *4 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /phpinfo.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2021/05/13 07:09:46 [error] 23#23: *4 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/13 07:09:46 [error] 23#23: *4 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/13 07:25:21 [emerg] 1#1: unknown "logdate" variable
+2021/05/13 18:01:40 [error] 23#23: *6 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/13 18:01:40 [error] 23#23: *6 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/17 16:30:27 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/h5.tianyuyou.com_80.conf:24
+2021/05/17 16:33:57 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/localhost.conf:24
+2021/05/17 18:09:14 [error] 23#23: *10 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/17 18:09:14 [error] 23#23: *10 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/phpinfo.php"
+2021/05/18 17:32:23 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/h5.tianyuyou.com_80.conf:24
+2021/05/18 17:32:53 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/h5.tianyuyou.com_80.conf:24
+2021/06/07 16:54:40 [emerg] 1#1: open() "/var/www/php_dev/sdk3.tianyuyou.com/www/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/sdk3.tianyuyou.com_80.conf:20
+2021/06/07 17:30:07 [warn] 1#1: conflicting server name "h5.tianyuyou.com" on 0.0.0.0:80, ignored
+2021/08/06 17:36:51 [notice] 24#24: signal process started
+2022/03/07 15:20:21 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:22 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:22 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:23 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:24 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:26 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:30 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:37 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:20:50 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:21:16 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:22:08 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/03/07 15:23:10 [emerg] 1#1: open() "/var/www/tyy-web/public/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.cssdk.local_80.conf:20
+2022/06/23 09:43:31 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:43:32 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:43:32 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:43:33 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:43:34 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:43:36 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:43:40 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:43:47 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:00 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:26 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:36 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:37 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:37 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:38 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:39 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:41 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:45 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:44:52 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:05 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:25 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:25 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:26 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:27 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:28 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:30 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:34 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:41 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:45:54 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:46:20 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:47:12 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20
+2022/06/23 09:48:12 [emerg] 1#1: open() "/etc/nginx/nginx.htaccess" failed (2: No such file or directory) in /etc/nginx/conf.d/test.bieshu.com_80.conf:20

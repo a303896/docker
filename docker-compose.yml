@@ -1,0 +1,135 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - "127.0.0.1:80:80"
+    #network_mode: "host"
+    volumes:
+      - ./nginx/1.19.10/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/1.19.10/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/1.19.10/log/:/var/log/nginx/
+      - ../nlx/phpproject/:/var/www/
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.2
+  php:
+    image: php:tianyuyou
+    restart: always
+    volumes:
+    #  - ./php/7.0.33/php.ini:/usr/local/etc/php/php.ini
+    #  - ./php/7.0.33/conf.d/:/usr/local/etc/php/conf.d/
+      - ./php/7.0.33/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./php/7.0.33/log/:/usr/local/php/var/log/
+      - ./php/7.0.33/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ../nlx/phpproject/:/var/www/
+    extra_hosts:
+      - "h5.tianyuyou.com:172.19.0.2"
+      - "m.tianyuyou.com:172.19.0.2"
+      - "release.tianyuyou.local:172.19.0.2"
+      - "test.cssdk.local:172.19.0.2"
+      - "test.tyyapi.local:172.19.0.2"
+      - "tyyapi.tianyuyou.com:172.19.0.2"
+      - "rewrite.tianyuyou.com:172.19.0.2"
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.3
+  php7.4:
+    image: kylekingcdn/php7.4-fpm-base
+    restart: always
+    volumes:
+    #  - ./php/7.4.2/conf.d/:/usr/local/etc/php/conf.d/
+      - ./php/7.4.2/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./php/7.4.2/log/:/usr/local/php/var/log/
+      - ./php/7.4.2/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ../nlx/phpproject/:/var/www/
+    extra_hosts:
+      - "h5.tianyuyou.com:172.19.0.2"
+      - "m.tianyuyou.com:172.19.0.2"
+      - "release.tianyuyou.local:172.19.0.2"
+      - "test.cssdk.local:172.19.0.2"
+      - "test.tyyapi.local:172.19.0.2"
+      - "tyyapi.tianyuyou.com:172.19.0.2"
+      - "rewrite.tianyuyou.com:172.19.0.2"
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.4
+  php7.1:
+    image: fr34kyn01535/php7.1-fpm
+    restart: always
+    volumes:
+    #  - ./php/7.4.2/conf.d/:/usr/local/etc/php/conf.d/
+      - ./php/7.1.33/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./php/7.1.33/log/:/usr/local/php/var/log/
+      - ./php/7.1.33/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ../nlx/phpproject/:/var/www/
+    extra_hosts:
+      - "h5.tianyuyou.com:172.19.0.2"
+      - "m.tianyuyou.com:172.19.0.2"
+      - "release.tianyuyou.local:172.19.0.2"
+      - "test.cssdk.local:172.19.0.2"
+      - "test.tyyapi.local:172.19.0.2"
+      - "tyyapi.tianyuyou.com:172.19.0.2"
+      - "rewrite.tianyuyou.com:172.19.0.2"
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.7
+  mysql:
+    image: mysql:latest
+    restart: always
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - ./mysql/8.0.26/my.cnf:/etc/mysql/my.cnf
+      - ./mysql/8.0.26/data/:/var/lib/mysql/
+      - ./mysql/8.0.26/mysql-files:/var/lib/mysql-files
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=Asia/Shanghai
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.5
+  golang-blog:
+    build:
+        context: D:\nlx\golang\blog
+        dockerfile: D:\nlx\golang\blog\Dockerfile
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - D:\nlx\golang\blog\conf:/conf
+      - D:\nlx\golang\blog\runtime:/runtime
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.6
+  #redis:
+  #  image: redis:latest
+  #  restart: always
+  #  ports:
+  #    - "127.0.0.1:6379:6379"
+  #  volumes:
+  #    - ./mysql/8.0.26/my.cnf:/etc/mysql/my.cnf
+  #    - ./mysql/8.0.26/data/:/var/lib/mysql/
+  #    - ./mysql/8.0.26/mysql-files:/var/lib/mysql-files
+  #  environment:
+  #    - MYSQL_ROOT_PASSWORD=root
+  #    - TZ=Asia/Shanghai
+  #  networks:
+  #    extnetwork:
+  #      ipv4_address: 172.19.0.5
+networks:
+  extnetwork:
+   ipam:
+    config:
+    - subnet: 172.19.0.0/16
